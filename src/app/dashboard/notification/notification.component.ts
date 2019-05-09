@@ -43,7 +43,7 @@ export class NotificationComponent implements OnInit {
         break;
     }
     $.notify({
-      message: 'Welcome to <b>MATERIAL DASHBOARD</b> - a beautiful dashboard for every web developer.',
+      message: 'Bienvenidos a <b>Pignora</b> - Plataforma de empeño y compraventa en línea.',
     }, {
       placement: {from, align},
       offset: {x: 20, y: 35},
