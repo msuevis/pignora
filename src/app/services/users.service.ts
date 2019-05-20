@@ -1,43 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../models/user';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UsersService {
 
-  constructor(public router: Router) { }
+  apiURL  = 'localhost:8080/api/users/';
 
-  async storeData(data) {
-    localStorage.setItem('userData', JSON.stringify(data));
-    const newData = await this.getData();
-    return this.router.navigate(['dashboard'], newData);
-  }
+  constructor(private httpClient: HttpClient) {}
 
-  getData() {
-    return JSON.parse(localStorage.getItem('userData'));
-  }
+  public createUser(user: User) { return this.httpClient.post(this.apiURL, user); }
 
-  sessionIn() {
-    let A;
-    if (this.getData()) {
-      A = this.router.navigate(['dashboard'], this.getData());
-    }
-    return A;
-  }
-
-  sessionOut() {
-    let A;
-    if (!this.getData()) {
-      A = this.router.navigate(['']);
-    }
-    return A;
-  }
-
-  logOut() {
-    localStorage.setItem('userData', '');
-    localStorage.clear();
-    return this.router.navigate(['']);
-  }
+  public getUser(id: string) { return this.httpClient.get('${this.apiURL}/${id}'); }
 
 }

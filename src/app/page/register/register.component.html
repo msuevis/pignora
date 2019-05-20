@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="background"></div>
+  <div class="container">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+    <div class="row register-panel">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="card">
+          <h2>Registrate</h2>
+          <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+              <div class="feature">
+                <div class="icon">
+                  <i class="material-icons" style="color: #e91e63;">store</i>
+                </div>
+                <div class="desc">
+                  <h4>Empeñar</h4>
+                  <p>Creando una cuenta puedes empeñar tus articulos y las compraventas asociadas podran ver tus articulos y hacerte una oferta.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="icon">
+                  <i class="material-icons" style="color: #9c27b0;">shopping_cart</i>
+                </div>
+                <div class="desc">
+                  <h4>COMPRAR</h4>
+                  <p>Con pignora tambien puedes encontrar un articulo de los miles que ofrecen nuestras compraventas.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="icon">
+                  <i class="material-icons" style="color: #00bcd4;">payment</i>
+                </div>
+                <div class="desc">
+                  <h4>PAGOS</h4>
+                  <p>Los pagos tambien pueden ser realizados atraves de nostros utilizando cualquier medio de pago.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-part">
+                <div class="socials">
+                  <a mat-mini-fab style="background-color: #55acee;"><i class="fa fa-twitter"></i></a>
+                  <a mat-mini-fab style="background-color: #ea4c89; margin: 0 5px;"><i class="fa fa-dribbble"></i></a>
+                  <a mat-mini-fab style="background-color: #3b5998;"><i class="fa fa-facebook"></i></a>
+                </div>
+                <h6 style="margin-bottom: 30px">O se clasico</h6>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    
+                     <div class="row">
+                        <i class="material-icons">face</i>
+                        <mat-form-field color="accent">
+                          <input type="text" formControlName="name" [ngClass]="{ 'is-invalid': submitted && field.name.errors }" matInput placeholder="Nombre y apellido">
+                      </mat-form-field>
+                      </div>
+                      <div class="row">
+                        <i class="material-icons">email</i>
+                        <mat-form-field color="accent">
+                          <input type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && field.email.errors }" matInput placeholder="Email">
+                        </mat-form-field>
+                      </div>
+                      <div class="row">
+                        <i class="material-icons">lock_outline</i>
+                        <mat-form-field color="accent">
+                          <input type="password"  formControlName="password" [ngClass]="{ 'is-invalid': submitted && field.password.errors }" matInput placeholder="Password">
+                        </mat-form-field>
+                      </div>
+                      <div class="row">
+                        <mat-checkbox style="margin-left: 2px"><p style="margin-left: 8px">Estoy de acuerdo con la <span style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p></mat-checkbox>
+                      </div>
+                      <div class="row" style="display: flex; justify-content: center">
+                        <button mat-raised-button class="btn btn-primary btn-round">Empezar</button>
+                      </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

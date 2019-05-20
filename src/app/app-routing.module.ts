@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './page/login/login.component';
-import { HomeComponent } from './dashboard/home/home.component';
+
+
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { TableComponent } from './dashboard/table/table.component';
 import { NotificationComponent } from './dashboard/notification/notification.component';
@@ -13,9 +14,12 @@ import { PanelsComponent} from './dashboard/component/panels/panels.component';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 
 import { RootComponent } from './dashboard/root/root.component';
+import { HomeComponent } from './dashboard/home/home.component';
+import { RegisterComponent } from './page/register/register.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: RootComponent, children: [
     {path: '', component: HomeComponent},
     {path: 'profile', component: ProfileComponent},

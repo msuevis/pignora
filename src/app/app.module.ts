@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
 
@@ -16,6 +18,7 @@ import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
 
 import { LoginComponent } from './page/login/login.component';
+import { RegisterComponent } from './page/register/register.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FigurecardComponent } from './shared/figurecard/figurecard.component';
@@ -58,6 +61,7 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     LoginComponent,
+    RegisterComponent,
     NavbarComponent,
     FigurecardComponent,
     ImagecardComponent,
@@ -81,7 +85,9 @@ export function provideConfig() {
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatRadioModule,
