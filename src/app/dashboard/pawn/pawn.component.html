@@ -1,0 +1,68 @@
+<div class="container">
+  <app-navbar title="Quiero empeñar"></app-navbar>
+  <div class="row" style="margin-top: 30px">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <i class="material-icons">perm_identity</i>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">¿ Que quieres empeñar ? -
+            <small class="category">regalanos los datos de tu producto</small>
+          </h4>
+          <form>
+            <div class="row">
+              <div class="col-md-4">
+                <mat-form-field color="accent">
+                  <input matInput type="text" placeholder="Nombre del producto" [(ngModel)]="product" value="" name="product">
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field color="accent">
+                  <input matInput type="text" placeholder="Marca" [(ngModel)]="brand" value="Samsung" name="brand">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <mat-form-field color="accent">
+                  <input matInput type="text" placeholder="No.Referencia" [(ngModel)]="numReference"  name="numReference">
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field color="accent">
+                  <input matInput type="text" placeholder="¿ Cuanto quieres ?" [(ngModel)]="value"  name="value">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                  <h7>Que quieres hacer </h7><br/>
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Vender   </mat-radio-button> 
+                    <mat-radio-button value="2">Empeñar  </mat-radio-button>
+                  </mat-radio-group>
+              </div>
+              <div class="col-md-4">
+                  
+              </div>
+            </div>
+            <div class="row action-btn">
+              <button md-raised-button type="submit" class="btn btn-rose">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card right-profile">
+        <div class="profile">
+          <img src="../../../assets/img/camera-icon.jpg" alt="profile"/>
+        </div>
+        <h6>Añade una imagen de tu producto</h6>
+        <p>añadiendo una buena imagen te es mas facil empeñar el producto que deseas </p>
+        <button mat-raised-button class="btn btn-rose btn-round">subir imagen</button>
+      </div>
+    </div>
+  </div>
+</div>

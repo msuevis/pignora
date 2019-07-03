@@ -35,6 +35,7 @@ import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { StarsComponent } from './dashboard/component/start/stars.component';
+import { PawnComponent  } from './dashboard/pawn/pawn.component';
 
 import { UsersService } from './services/users.service';
 
@@ -79,7 +80,8 @@ export function provideConfig() {
     PriceTableComponent,
     PanelsComponent,
     WizardComponent,
-    StarsComponent
+    StarsComponent,
+    PawnComponent
   ],
   imports: [
     BrowserModule,

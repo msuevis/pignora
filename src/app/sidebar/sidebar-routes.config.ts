@@ -4,4 +4,5 @@ export const ROUTES = [
     { path: 'table', title: 'Historial', icon: 'content_paste', children: null },
     { path: 'notification', title: 'Notification', icon: 'notifications', children: null },
     { path: 'settings', title: 'Settings', icon: 'settings', children: null },
+    { path: 'pawn', title: 'Quiero empeñar', icon: 'monetization_on',  children: null}
 ];
